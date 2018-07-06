@@ -40,10 +40,16 @@ class Node(object):
 def intervals(starts, ends):
     n = len(starts)
     segments = []
-    for i in range(n):
-        segments.append(Segment(starts[i], ends[i]))
+    D = {}
 
-    return segments
+    for i in range(n):
+        if (starts[i], ends[i]) in D:
+            D[(starts[i], ends[i])] += 1
+        else:
+            segments.append(Segment(starts[i], ends[i]))
+            D[(starts[i], ends[i])] = 1
+
+    return segments, D
 
 
 def construct_intervaltree(segments):
@@ -78,7 +84,7 @@ def construct_intervaltree(segments):
     return v
 
 
-def containing_intervals(v, qx):
+def containing_intervals(v, qx, D):
     if v is None:
         return 0
 
@@ -90,32 +96,32 @@ def containing_intervals(v, qx):
                 break
 
             if it.start <= qx <= it.end:
-                c_intervals += 1
+                c_intervals += D[(it.start, it.end)]
 
-        c_intervals += containing_intervals(v.lc, qx)
+        c_intervals += containing_intervals(v.lc, qx, D)
     else:
         for i in range(len(v.d_right)):
             it = v.d_right[i]
             if it.end < qx:
                 break
             if it.start <= qx <= it.end:
-                c_intervals += 1
+                c_intervals += D[(it.start, it.end)]
 
-        c_intervals += containing_intervals(v.rc, qx)
+        c_intervals += containing_intervals(v.rc, qx, D)
 
     return c_intervals
 
 
 def intervaltree_count_segments(starts, ends, points):
     # construct intervals
-    S = intervals(starts, ends)
+    S, D = intervals(starts, ends)
 
     # construct intervaltree
     it = construct_intervaltree(S)
 
     cnt = [0] * len(points)
     for i in range(len(points)):
-        cnt[i] = containing_intervals(it, ppoints[i])
+        cnt[i] = containing_intervals(it, points[i], D)
 
     return cnt
 
