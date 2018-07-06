@@ -1,0 +1,7 @@
+H:\_hackerreborn\2018\CSharp\Classes_2\bin\Debug\Classes_2.exe.config
+H:\_hackerreborn\2018\CSharp\Classes_2\bin\Debug\Classes_2.exe
+H:\_hackerreborn\2018\CSharp\Classes_2\bin\Debug\Classes_2.pdb
+H:\_hackerreborn\2018\CSharp\Classes_2\obj\Debug\Classes_2.csprojAssemblyReference.cache
+H:\_hackerreborn\2018\CSharp\Classes_2\obj\Debug\Classes_2.csproj.CoreCompileInputs.cache
+H:\_hackerreborn\2018\CSharp\Classes_2\obj\Debug\Classes_2.exe
+H:\_hackerreborn\2018\CSharp\Classes_2\obj\Debug\Classes_2.pdb

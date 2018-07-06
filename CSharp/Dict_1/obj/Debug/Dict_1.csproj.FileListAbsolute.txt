@@ -1,0 +1,7 @@
+H:\_hackerreborn\2018\CSharp\Dict_1\bin\Debug\Dict_1.exe.config
+H:\_hackerreborn\2018\CSharp\Dict_1\bin\Debug\Dict_1.exe
+H:\_hackerreborn\2018\CSharp\Dict_1\bin\Debug\Dict_1.pdb
+H:\_hackerreborn\2018\CSharp\Dict_1\obj\Debug\Dict_1.csprojAssemblyReference.cache
+H:\_hackerreborn\2018\CSharp\Dict_1\obj\Debug\Dict_1.csproj.CoreCompileInputs.cache
+H:\_hackerreborn\2018\CSharp\Dict_1\obj\Debug\Dict_1.exe
+H:\_hackerreborn\2018\CSharp\Dict_1\obj\Debug\Dict_1.pdb
